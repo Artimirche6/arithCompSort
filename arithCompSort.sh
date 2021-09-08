@@ -26,3 +26,18 @@ while [ $n -lt 4 ]
 do 
 	resultPrint[((n++))]=${result[$n]}
 done
+
+for (( i=0; i<4; i++ ))
+do
+        for (( j=i+1; j<4; j++ ))
+        do
+                if [ "${resultPrint[i]}" -lt "${resultPrint[j]}" ]
+                then
+                        temp=${resultPrint[i]}
+                        number[i]=${resultPrint[j]}
+                        number[j]=$temp;
+                fi
+        done
+done
+
+echo ${resultPrint[*]}
