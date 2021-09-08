@@ -9,3 +9,4 @@ read -p "Enter the num c : " c
 n1=$(($a+$b*$c))
 n2=$(($a*$b+$c))
 n3=$(($a%$b+$c))
+n4=$(($c+$a/$b))
