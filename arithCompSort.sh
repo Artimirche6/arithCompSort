@@ -13,9 +13,16 @@ n4=$(($c+$a/$b))
 
 declare -A result
 
-result["1"]=$n1
-result["2"]=$n2
-result["3"]=$n3
-result["4"]=$n4
+result["0"]=$n1
+result["1"]=$n2
+result["2"]=$n3
+result["3"]=$n4
 
+n=0
 
+declare -a resultPrint
+
+while [ $n -lt 4 ]
+do 
+	resultPrint[((n++))]=${result[$n]}
+done
