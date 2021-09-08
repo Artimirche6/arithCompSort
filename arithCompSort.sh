@@ -10,3 +10,12 @@ n1=$(($a+$b*$c))
 n2=$(($a*$b+$c))
 n3=$(($a%$b+$c))
 n4=$(($c+$a/$b))
+
+declare -A result
+
+result["1"]=$n1
+result["2"]=$n2
+result["3"]=$n3
+result["4"]=$n4
+
+
