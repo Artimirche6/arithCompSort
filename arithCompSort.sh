@@ -38,12 +38,12 @@ do
                 if [ "${resultPrint[i]}" -lt "${resultPrint[j]}" ]
                 then
                         temp=${resultPrint[i]}
-                        number[i]=${resultPrint[j]}
-                        number[j]=$temp;
+                        resultPrint[i]=${resultPrint[j]}
+                        resultPrint[j]=$temp;
                 fi
         
 	done
-	echo ${resultPrint[*]}
+	echo " Descending Order : " ${resultPrint[*]}
 
 done
 
@@ -55,11 +55,11 @@ do
                 if [ "${resultPrint[i]}" -gt "${resultPrint[j]}" ]
                 then
                         temp=${resultPrint[i]}
-                        number[i]=${resultPrint[j]}
-                        number[j]=$temp;
+                        resultPrint[i]=${resultPrint[j]}
+                        resultPrint[j]=$temp;
                 fi
         done
 
-	echo ${resultPrint[*]}
+	echo " Ascending Order : " ${resultPrint[*]}
 
 done
